@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Mali Yam</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ===========================
+HEADER
+=========================== -->
+
+<header>
+
+<button id="menuBtn">
+☰
+</button>
+
+<div class="titleBox">
+
+<h1>Mali Yam</h1>
+
+<p id="version">
+v5.0.0
+</p>
+
+</div>
+
+</header>
+
+<!-- ===========================
+SIDEBAR
+=========================== -->
+
+<nav id="sidebar">
+
+<h2>Mali Yam</h2>
+
+<button id="dashboardBtn">
+ Dashboard
+</button>
+
+
+<button id="reportsBtn">
+See Your Activity
+</button>
+
+<button id="supportBtn">
+Buy Me a Coffee
+</button>
+
+<button id="aboutBtn">
+ℹ About
+</button>
+
+<hr>
+
+<button id="resetTodayBtn">
+Reset Today
+</button>
+
+<button id="resetCycleBtn">
+Reset Pay Cycle
+</button>
+
+<button id="resetAllBtn">
+Reset Everything
+</button>
+
+</nav>
+
+<div id="overlay"></div>
+
+<!-- ===========================
+HOME
+=========================== -->
+
+<main id="dashboard">
+
+<div class="card">
+
+<h3>TODAY</h3>
+
+<div id="todayMoney">
+
+R0.00
+
+</div>
+
+<div id="todayHours">
+
+0.00 Hours
+
+</div>
+
+<div id="status">
+
+🔴 OFF DUTY
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>PAY CYCLE</h3>
+
+<div id="cycleMoney">
+
+R0.00
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>WORK TYPE</h3>
+
+<label>
+
+<input
+type="radio"
+name="mode"
+value="normal"
+checked>
+
+Normal
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="mode"
+value="sunday">
+
+Sunday (1.5×)
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="mode"
+value="holiday">
+
+Public Holiday (2×)
+
+</label>
+
+</div>
+
+<div class="buttonArea">
+
+<button
+id="checkInBtn"
+class="green">
+
+CHECK IN
+
+</button>
+
+<button
+id="checkOutBtn"
+class="red">
+
+CHECK OUT
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>ACTIVITY</h3>
+
+<div id="activityList">
+
+No activity yet.
+
+</div>
+
+</div>
+
+</main>
+
+<!-- ===========================
+FIRST SETUP
+=========================== -->
+
+<div
+id="setupModal"
+class="modal hidden">
+
+<div class="modalBox">
+
+<h2>
+
+Welcome to Mali Yam
+
+</h2>
+
+<p>
+
+Complete setup to start using the app.
+
+</p>
+
+<label>
+
+Hourly Rate
+
+<input
+id="hourlyRate"
+type="number">
+
+</label>
+
+<label>
+
+Pay Cycle Starts
+
+<select id="cycleStart">
+
+</select>
+
+</label>
+
+<label>
+
+Normal Hours
+
+<select id="normalHours">
+
+<option>6</option>
+<option selected>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+
+</select>
+
+</label>
+
+<label>
+
+Lunch Minutes
+
+<select id="lunchMinutes">
+
+<option>30</option>
+<option>45</option>
+<option selected>60</option>
+<option>75</option>
+<option>90</option>
+
+</select>
+
+</label>
+
+<label>
+
+Overtime Rate
+
+<input
+id="overtimeRate"
+type="number"
+step=".1"
+value="1.5">
+
+</label>
+
+<label>
+
+Sunday Rate
+
+<input
+id="sundayRate"
+type="number"
+step=".1"
+value="1.5">
+
+</label>
+
+<label>
+
+Holiday Rate
+
+<input
+id="holidayRate"
+type="number"
+step=".1"
+value="2">
+
+</label>
+
+<label class="checkRow">
+
+<input
+id="sound"
+type="checkbox"
+checked>
+
+Notification Sound
+
+</label>
+
+<label class="checkRow">
+
+<input
+id="vibration"
+type="checkbox"
+checked>
+
+Vibration
+
+</label>
+
+<button
+id="saveSetupBtn"
+class="saveBtn">
+
+Save & Continue
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ===========================
+SETTINGS
+=========================== -->
+
+<section
+id="settingsScreen"
+class="screen hidden">
+
+<div class="screenHeader">
+
+<button class="backBtn">
+ Back
+</button>
+
+<h2>Settings</h2>
+
+</div>
+
+<div id="settingsContent">
+
+</div>
+
+</section>
+
+<!-- ===========================
+REPORTS
+=========================== -->
+
+<section
+id="reportsScreen"
+class="screen hidden">
+
+<div class="screenHeader">
+
+<button class="backBtn">
+ Back
+</button>
+
+<h2>Pay Cycle Reports</h2>
+
+</div>
+
+<div id="reportsContent"></div>
+
+</section>
+
+<!-- ===========================
+ABOUT
+=========================== -->
+
+<section
+id="aboutScreen"
+class="screen hidden">
+
+<div class="screenHeader">
+
+<button class="backBtn">
+ Back
+</button>
+
+<h2>About Mali Yam</h2>
+
+</div>
+
+<p>
+
+Version 5.0.0
+
+</p>
+
+<p>
+
+Developed by
+
+<strong>Anele Bango</strong>
+
+</p>
+
+<p>
+
+Made in South Africa 🇿🇦
+
+</p>
+
+</section>
+
+<!-- ===========================
+SUPPORT
+=========================== -->
+
+<section
+id="supportScreen"
+class="screen hidden">
+
+<div class="screenHeader">
+
+<button class="backBtn">
+ Back
+</button>
+
+<h2>Support Mali Yam</h2>
+
+</div>
+
+<p>
+
+If Mali Yam has made your workday a little easier,
+you can fuel the next update with a coffee.
+
+<br><br>
+
+Every contribution helps improve Mali Yam with
+new features, fixes and updates.
+
+</p>
+
+<div class="coffeeButtons">
+
+<button class="coffeePreset" data-value="10">
+ R10
+</button>
+
+<button class="coffeePreset" data-value="20">
+ R20
+</button>
+
+<button class="coffeePreset" data-value="50">
+ R50
+</button>
+
+</div>
+
+<label>
+
+Custom Amount
+
+<input
+id="coffeeAmount"
+type="number"
+min="10"
+value="10">
+
+</label>
+
+<button
+id="coffeeBtn"
+class="saveBtn">
+
+ Buy the developer a coffee
+
+</button>
+
+</section>
+
+<!-- ===========================
+CONFIRM MODAL
+=========================== -->
+
+<div
+id="confirmModal"
+class="modal hidden">
+
+<div class="modalBox">
+
+<h2 id="confirmTitle">
+Confirm
+</h2>
+
+<p id="confirmMessage">
+Are you sure?
+</p>
+
+<div class="confirmButtons">
+
+<button
+id="confirmCancel"
+class="cancelBtn">
+
+Cancel
+
+</button>
+
+<button
+id="confirmOk"
+class="dangerBtn">
+
+Yes
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+<!-- ===========================
+TOAST
+=========================== -->
+
+<div
+id="toast"
+class="hidden">
+
+</div>
+<script src="html2canvas.min.js"></script>
+<script src="jspdf.umd.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

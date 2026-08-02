@@ -1,0 +1,1033 @@
+/*=========================================================
+MALI YAM v5.0.0
+STYLE.CSS
+PART 1
+=========================================================*/
+
+/*=========================================================
+RESET
+=========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:#111;
+
+    color:#ffffff;
+
+    max-width:520px;
+
+    margin:auto;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    padding:15px;
+
+}
+
+
+/*=========================================================
+VARIABLES
+=========================================================*/
+
+:root{
+
+    --bg:#111111;
+
+    --card:#1d1d1d;
+
+    --card2:#262626;
+
+    --border:#343434;
+
+    --green:#00d46a;
+
+    --greenDark:#00b85c;
+
+    --red:#d50000;
+
+    --orange:#ff9800;
+
+    --blue:#1b84ff;
+
+    --text:#ffffff;
+
+    --text2:#bbbbbb;
+
+    --radius:18px;
+
+}
+
+
+/*=========================================================
+GENERAL
+=========================================================*/
+
+.hidden{
+
+    display:none !important;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    font-size:16px;
+
+    border-radius:14px;
+
+}
+
+button:hover{
+
+    opacity:.95;
+
+}
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+
+/*=========================================================
+HEADER
+=========================================================*/
+
+header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:20px;
+
+}
+
+#menuBtn{
+
+    width:50px;
+
+    height:50px;
+
+    background:none;
+
+    color:var(--green);
+
+    font-size:30px;
+
+}
+
+.titleBox{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+h1{
+
+    font-size:34px;
+
+    color:var(--green);
+
+    font-weight:900;
+
+}
+
+#version{
+
+    color:#888;
+
+    font-size:12px;
+
+    margin-top:3px;
+
+}
+
+
+/*=========================================================
+DASHBOARD
+=========================================================*/
+
+#dashboard{
+
+    width:100%;
+
+}
+
+
+/*=========================================================
+CARDS
+=========================================================*/
+
+.card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin-bottom:15px;
+
+}
+
+.card h3{
+
+    color:#dddddd;
+
+    margin-bottom:15px;
+
+    font-size:17px;
+
+}
+
+
+/*=========================================================
+TODAY
+=========================================================*/
+
+#todayMoney{
+
+    font-size:52px;
+
+    color:var(--green);
+
+    font-weight:900;
+
+    margin-bottom:10px;
+
+}
+
+
+
+#todayHours{
+
+    font-size:20px;
+
+    color:#cccccc;
+
+    margin-bottom:10px;
+
+}
+
+#status{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+/*=========================================================
+PAY CYCLE
+=========================================================*/
+
+#cycleMoney{
+
+    font-size:42px;
+
+    font-weight:bold;
+
+    color:var(--green);
+
+}
+
+
+/*=========================================================
+RADIOS
+=========================================================*/
+
+.card label{
+
+    display:block;
+
+    margin-bottom:15px;
+
+    cursor:pointer;
+
+    color:#dddddd;
+
+}
+
+input[type=radio]{
+
+    margin-right:10px;
+
+}
+
+
+/*=========================================================
+BUTTON AREA
+=========================================================*/
+
+.buttonArea{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-bottom:15px;
+
+}
+
+.green{
+
+    height:58px;
+
+    background:var(--green);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+.green:hover{
+
+    background:var(--greenDark);
+
+}
+
+.red{
+
+    height:58px;
+
+    background:var(--red);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+/*=========================================================
+ACTIVITY
+=========================================================*/
+
+#activityList{
+
+    font-size:14px;
+
+    color:#bbbbbb;
+
+    line-height:1.6;
+
+}
+
+.activityDay{
+
+margin-top:18px;
+
+margin-bottom:8px;
+
+padding-bottom:6px;
+
+font-size:17px;
+
+font-weight:bold;
+
+color:#00d46a;
+
+border-bottom:1px solid #333;
+
+}
+
+.activityItem{
+
+padding:6px 0;
+
+margin-left:12px;
+
+color:#d0d0d0;
+
+font-size:14px;
+
+line-height:1.5;
+
+border-bottom:1px dashed #2a2a2a;
+
+}
+
+
+/*=========================================================
+SCREENS
+=========================================================*/
+
+.screen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#111;
+
+    overflow:auto;
+
+    padding:20px;
+
+    z-index:1500;
+
+}
+
+.screen h2{
+
+    color:var(--green);
+
+    margin-bottom:20px;
+
+}
+
+/*=========================================================
+SIDEBAR
+=========================================================*/
+
+#sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:270px;
+
+    height:100vh;
+
+    background:#1b1b1b;
+
+    padding:25px 18px;
+
+    border-right:1px solid #2f2f2f;
+
+    transform:translateX(-100%);
+
+    transition:.3s;
+
+    z-index:3000;
+
+    overflow-y:auto;
+
+}
+
+#sidebar.open{
+
+    transform:translateX(0);
+
+}
+
+#sidebar h2{
+
+    color:var(--green);
+
+    margin-bottom:20px;
+
+}
+
+#sidebar button{
+
+    width:100%;
+
+    height:50px;
+
+    margin-bottom:10px;
+
+    background:#272727;
+
+    color:white;
+
+    text-align:left;
+
+    padding-left:15px;
+
+}
+
+#sidebar button:hover{
+
+    background:#333;
+
+}
+
+#sidebar hr{
+
+    border:none;
+
+    border-top:1px solid #333;
+
+    margin:18px 0;
+
+}
+
+
+/*=========================================================
+OVERLAY
+=========================================================*/
+
+#overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(2px);
+
+    display:none;
+
+    z-index:2500;
+
+}
+
+#overlay.show{
+
+    display:block;
+
+}
+
+
+/*=========================================================
+MODAL
+=========================================================*/
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.82);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    z-index:5000;
+
+}
+
+.modalBox{
+
+    width:100%;
+
+    max-width:430px;
+
+    background:#1f1f1f;
+
+    border-radius:20px;
+
+    border:1px solid #333;
+
+    padding:25px;
+
+    animation:popup .25s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(.9);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.modalBox h2{
+
+    color:var(--green);
+
+    margin-bottom:12px;
+
+    font-size:28px;
+
+}
+
+.modalBox p{
+
+    color:#aaaaaa;
+
+    margin-bottom:22px;
+
+    line-height:1.6;
+
+}
+
+.modal label{
+
+    display:block;
+
+    margin-top:18px;
+
+    color:#dddddd;
+
+    font-size:14px;
+
+}
+
+.modal input,
+
+.modal select{
+
+    width:100%;
+
+    height:50px;
+
+    margin-top:8px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2c2c2c;
+
+    color:white;
+
+    padding:0 14px;
+
+    font-size:16px;
+
+}
+
+.modal input:focus,
+
+.modal select:focus{
+
+    outline:2px solid var(--green);
+
+}
+
+
+/*=========================================================
+CHECK ROW
+=========================================================*/
+
+.checkRow{
+
+    display:flex !important;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:20px;
+
+    gap:15px;
+
+}
+
+.checkRow input{
+
+    width:22px !important;
+
+    height:22px !important;
+
+}
+
+
+/*=========================================================
+SAVE BUTTON
+=========================================================*/
+
+.saveBtn{
+
+    width:100%;
+
+    height:56px;
+
+    margin-top:28px;
+
+    background:var(--green);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+.saveBtn:hover{
+
+    background:var(--greenDark);
+
+}
+
+
+/*=========================================================
+TOAST
+=========================================================*/
+
+#toast{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:25px;
+
+    transform:translateX(-50%) translateY(120px);
+
+    background:#202020;
+
+    color:white;
+
+    padding:15px 20px;
+
+    border-left:5px solid var(--green);
+
+    border-radius:12px;
+
+    transition:.3s;
+
+    z-index:7000;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.45);
+
+}
+
+#toast.show{
+
+    transform:translateX(-50%) translateY(0);
+
+}
+
+
+/*=========================================================
+SETTINGS / REPORTS / ABOUT / SUPPORT
+=========================================================*/
+
+.screen p{
+
+    color:#cccccc;
+
+    line-height:1.7;
+
+    margin-bottom:15px;
+
+}
+
+.screen button{
+
+    margin-top:15px;
+
+}
+
+
+/*=========================================================
+SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#444;
+
+    border-radius:8px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#666;
+
+}
+
+
+/*=========================================================
+MOBILE
+=========================================================*/
+
+@media(max-width:500px){
+
+    body{
+
+        padding:12px;
+
+    }
+
+    #todayMoney{
+
+        font-size:44px;
+
+    }
+
+    #cycleMoney{
+
+        font-size:36px;
+
+    }
+
+    .card{
+
+        padding:18px;
+
+    }
+
+}
+
+
+/*=========================================================
+PRINT
+=========================================================*/
+
+@media print{
+
+    body{
+
+        background:white;
+
+        color:black;
+
+        max-width:none;
+
+    }
+
+    header,
+
+    #sidebar,
+
+    #overlay,
+
+    .buttonArea,
+
+    .modal,
+
+    #toast{
+
+        display:none !important;
+
+    }
+
+    .card{
+
+        background:white;
+
+        border:1px solid #ccc;
+
+        box-shadow:none;
+
+    }
+
+}
+
+.screenHeader{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:25px;
+
+}
+
+.backBtn{
+
+background:#2a2a2a;
+
+color:white;
+
+padding:10px 18px;
+
+border-radius:12px;
+
+}
+
+.backBtn:hover{
+
+background:#3a3a3a;
+
+}
+
+/*=========================================================
+CONFIRM MODAL
+=========================================================*/
+
+.confirmButtons{
+
+display:flex;
+
+gap:12px;
+
+margin-top:25px;
+
+}
+
+.confirmButtons button{
+
+flex:1;
+
+height:55px;
+
+font-size:17px;
+
+font-weight:bold;
+
+}
+
+.cancelBtn{
+
+background:#3a3a3a;
+
+color:white;
+
+}
+
+.cancelBtn:hover{
+
+background:#4a4a4a;
+
+}
+
+.dangerBtn{
+
+background:#d50000;
+
+color:white;
+
+}
+
+.dangerBtn:hover{
+
+background:#b00000;
+
+}
+
+/*=========================================================
+COFFEE SUPPORT
+=========================================================*/
+
+.coffeeButtons{
+
+display:flex;
+
+gap:12px;
+
+margin:25px 0;
+
+}
+
+.coffeePreset{
+
+flex:1;
+
+height:55px;
+
+background:#2b2b2b;
+
+color:white;
+
+font-weight:bold;
+
+font-size:17px;
+
+}
+
+.coffeePreset:hover{
+
+background:#3a3a3a;
+
+}
+
+.coffeePreset.active{
+
+background:var(--green);
+
+color:white;
+
+}
+
+#coffeeAmount{
+
+width:100%;
+
+height:55px;
+
+margin-top:10px;
+
+margin-bottom:20px;
+
+background:#2b2b2b;
+
+border:none;
+
+border-radius:14px;
+
+padding:0 15px;
+
+font-size:22px;
+
+text-align:center;
+
+color:white;
+
+}
