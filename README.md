@@ -40,7 +40,7 @@ MaliYam is a web-based application built to simplify personal income tracking wi
 
 ### About
 
-![About](assets/screenshots/about.png)
+![About](assets/screenshots/about2.png)
 
 ### Daily Activity
 
